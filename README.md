@@ -1,6 +1,7 @@
 # TV Dot Files
 
 [Source: The best way to store your dotfiles: A bare Git repository](https://www.atlassian.com/git/tutorials/dotfiles)
+[Source: A simpler way to manage your dotfiles](https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html)
 
 ## Setup new machine
 
