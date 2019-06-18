@@ -70,5 +70,6 @@ dotfiles push
 ```
 
 Branch | Description | Notes
+-------|-------------|------
 machines/osx | mac | osx 10.14.4
 
