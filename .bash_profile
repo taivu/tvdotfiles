@@ -90,4 +90,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Hom
 export ANDROID_HOME=/usr/local/share/android-sdk
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.tvdotfiles/ --work-tree=$HOME'
- 
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+function iterm2_print_user_vars() {
+  iterm2_set_user_var phpVersion "$(php -v | awk '/^PHP/ { print $2 }')"
+  iterm2_set_user_var rubyVersion "$(ruby -v | awk '{ print $2 }')"
+  iterm2_set_user_var nodeVersion "$(node -v)"
+}
