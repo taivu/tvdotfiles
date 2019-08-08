@@ -2,6 +2,10 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 export PATH=/usr/local/php5/bin:$PATH
 # export PATH="$HOME/.npm-packages/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
