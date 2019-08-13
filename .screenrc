@@ -1,0 +1,45 @@
+# chdir
+
+# no welcome message
+startup_message off
+
+# 256 colors
+attrcolor b ".I"                                         # allow bold colors - necessary for some reason
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' # tell screen how to set colors. AB = background, AF=foreground
+defbce on                                                # use current bg color for erased chars
+
+
+# Fix for residual editor text (When you open a text editor like nano in screen and then close it, the text may stay visible in your terminal)
+altscreen on
+
+# Other
+defutf8 on
+autodetach on
+
+#escape character is ` instead than C-a
+escape ``
+defescape ``
+
+# hardstatus on
+# hardstatus alwayslastline
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d%{W}%{g}]'
+# the following two lines give a two-line status, with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+
+# huge scrollback buffer
+defscrollback 5000
+
+# emulate .logout message
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
+# next/prev windows with shift right/left arrows
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
+
+# Fix for Name column in windowlist only show "bash"
+windowlist string "%4n %h%=%f"
+
+# get rid of silly xoff stuff
+bind s split
+
