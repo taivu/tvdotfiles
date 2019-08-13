@@ -1,4 +1,5 @@
 # chdir
+defshell -bash
 
 # no welcome message
 startup_message off
@@ -23,9 +24,12 @@ defescape ``
 # hardstatus on
 # hardstatus alwayslastline
 # hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d%{W}%{g}]'
+# caption always "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+
 # the following two lines give a two-line status, with the current window highlighted
 hardstatus alwayslastline
 hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+
 
 # huge scrollback buffer
 defscrollback 5000
