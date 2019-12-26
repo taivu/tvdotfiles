@@ -102,3 +102,6 @@ function iterm2_print_user_vars() {
   iterm2_set_user_var rubyVersion "$(ruby -v | awk '{ print $2 }')"
   iterm2_set_user_var nodeVersion "$(node -v)"
 }
+
+# source ~/.bash-powerline.sh
+
